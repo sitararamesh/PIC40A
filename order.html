@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+    <title>Order Sitara's Cookies</title>
+  </head>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Form -->
+    <h1>Order Form</h1>
+    <form action="" method="get">
+
+      <!-- Fieldset 1 - Customer Info -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" />
+        <br />
+
+        <label for="email">Email Address: </label>
+        <input type="text" name="email" id="email" />
+        <br />
+
+        <label for="street">Street Address: </label>
+        <input type="text" name="street" id="street" />
+        <br />
+
+        <label for="city">City: </label>
+        <input type="text" name="city" id="city" />
+        <br />
+
+        <label for="state">State: </label>
+        <input type="text" name="state" id="state" />
+        <br />
+
+        <label for="zipcode">Zipcode: </label>
+        <input type="text" name="zipcode" id="zipcode" />
+
+      </fieldset>
+
+      <!-- Fieldset 2 - Order Info -->
+      <fieldset>
+        <legend>Place an Order</legend>
+        <!-- Product Prices and Descriptions -->
+        <table border="border">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price (per cookie)</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+              <td>Chocolate Chip</td>
+              <td>A classic cookie made with fair-trade Amazonian chocolate and Madagascar vanilla.</td>
+              <td>$1.50</td>
+              <td><input type="text" name="chocolate-chip" /></td>
+            </tr>
+            <tr>
+              <td>Snickerdoodle</td>
+              <td>A classic cookie made with Madagascar vanilla and Korinjte cinnamon.</td>
+              <td>$1.50</td>
+              <td><input type="text" name="snickerdoodle" /></td>
+            </tr>
+            <tr>
+              <td>PPB&trade; - Pretzel &amp; Peanut Butter</td>
+              <td>A cookie embodying the pairing of sweet and salty and soft and crunchy. Made with locally-made Pretzel&apos;s, and organic, raw Peanut Butter that we grind in-house.</td>
+              <td>$2.00</td>
+              <td><input type="text" name="ppb" /></td>
+            </tr>
+            <tr>
+              <td>Vieille &eacute;cole&trade; - Sugar Cookie</td>
+              <td>A modern take on the classic sugar cookie. Made with Madagascar vanilla and raw cane sugar.</td>
+              <td>$2.00</td>
+              <td><input type="text" name="ve" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+
+        <!-- Payment -->
+        Select a credit card type:
+        <select name="cardtype">
+          <option>Visa</option>
+          <option>MasterCard</option>
+          <option>Discovery Card</option>
+          <option>American Express</option>
+          <option>Other</option>
+        </select>
+        <br />
+        <label for="ccno">Enter your credit card number: </label>
+        <input type="password" name="ccno" id="ccno" />
+        <br />
+        <label for="cvv">Enter the 3-4 digit security code: </label>
+        <input type="password" name="cvv" id="cvv" />
+        <br />
+        <label for="exp-date">Enter the credit card expiry date (MM/YY): </label>
+        <input type="text" name="exp-date" id="exp-date" />
+        <br />
+        <br />
+
+        <!-- Marketing Info -->
+        How did you hear out about Sitara's Cookies?
+        <input type="radio" name="market-data" value=""/>Facebook
+        <input type="radio" name="market-data" value=""/>Instagram
+        <input type="radio" name="market-data" value=""/>Word of Mouth
+        <input type="radio" name="market-data" value=""/>News Article
+        <input type="radio" name="market-data" value=""/>Yelp
+        <input type="radio" name="market-data" value=""/>Other
+        <br />
+        <br />
+
+        <input type="checkbox" name="subscribe" value="yes" checked="checked"/>Would you like to receive emails about offers, new cookies, etc?
+        <br />
+        <br />
+      </fieldset>
+
+    <!-- Fieldset 3 - Submit Info-->
+    <fieldset>
+      <input type="reset" value="Clear Order Form" />
+      <input type="submit" value="Confirm Order" />
+    </fieldset>
+  </form>
+  <!-- END FORM -->
+
+<h3>&copy;2017 <a href="mybusiness.html">Sitara&apos;s Cookies</a></h3>
+
+<!-- Validator -->
+
+<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a></p>
+
+</body>
+</html>
