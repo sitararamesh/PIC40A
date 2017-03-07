@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title>Simple JavaScript Calculator</title>
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Playfair+Display" rel="stylesheet" />
+
+<script type="text/javascript">
+<!-- 
+	// GLOBAL VARIABLE DEClARATION
+	
+	cur = ""; // current value
+	mem = ""; //initialize memory
+	op = 0; // records operations
+	MAXLENGTH = 30; // max number of digits before decimal;
+	clear = false;
+
+	// DISPLAY FUNCTION
+
+    function view(num) {
+     	num.toString();
+     	document.Calculator.Display.value = num;
+    }
+
+    // ADDS DIGITS
+
+     function displayDigit(n) {
+     	if (clear == true) {cur = "";}
+     	clear = false;
+     	n.toString();
+     	cur.toString();
+     	cur = cur + n;
+     	view(cur);
+
+     }
+
+     // EVALUATE
+     function calc() {
+     	if (cur == "") {cur = "0";}
+     	if (op == 1) {
+     		cur = Number(cur) + Number(mem); }
+     	else if (op == 2) {
+     		cur = Number(mem) - Number(cur); } 
+     	else if (op == 3) {
+     		cur = Number(mem) * Number(cur); }
+     	else if (op == 4) {
+     		cur = Number(mem) / Number(cur); }
+
+     	op = 0; // re-initialize operation
+     	cur.toString();
+     	view(cur);
+     	clear = true;
+     }
+
+
+     // FOR DECIMAL PTS
+     function decimal() {
+     	if (clear == true) {cur = "0.";}
+     	clear = false;
+     	if (cur.length == 0) {cur = "0.";}
+     	else if (cur.indexOf(".") == -1) {cur = cur + ".";}
+     	else if (Number(cur) == 0 && cur.indexOf(".") == -1) {cur = cur + String();}
+     	cur.toString();
+     	view(cur);
+     }
+
+     // FOR OPERATIONS
+     function storeOp(opr) {
+     	if (mem == "") {
+     		op = opr;
+     		mem = cur;
+     		cur = ""; 
+     	}
+     	else {
+     		calc();
+     		op = opr;
+     		mem = cur;
+     		cur = "";
+       	}
+     }
+
+     // OTHER OPERATIONS FOR FUN
+     function sine() {
+     	cur = Math.sin(cur);
+     	cur.toString();
+     	view(cur);
+     }
+     function cosine() {
+     	cur = Math.cos(cur);
+     	cur.toString();
+     	view(cur);
+     }
+     function tans() {
+     	cur = Math.tan(cur);
+     	cur.toString();
+     	view(cur);
+     }
+
+     function pi(){
+     	clear = true;
+     	displayDigit(Math.PI);
+     	clear = false;
+     }
+
+//-->
+
+</script>
+<style type="text/css">
+	html {
+		background-color: #BFDBF7;
+	}
+	h1 {
+		text-align: center;
+		font-family: 'Playfair Display', serif;
+		font-weight: normal;
+		font-size: 72px;
+		color: #A31621;
+	}
+	table {
+		border: none;
+		text-align: center;
+		font-size: 120%;
+		background-color: #BFDBF7;
+		height: 300px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		border-spacing: 10px;
+
+	}
+	td {
+		height: 50px;
+		width: 100%;
+	}
+	input[type="text"] {
+		height: 50px;
+		width: 100%;
+		font-size: 40pt;
+		color: #344055;
+		border: none;
+		text-align: center;
+		margin-bottom: 30px; 
+	}
+	input {
+		background-color: #BFDBF7;
+		color: #A31621;
+		font-family: 'Droid Serif', serif;
+		font-size: 25pt;
+	}
+	input[type="button"]:hover {
+		background-color: #266DD3;
+		color: #fff ;	}
+
+	input[type="button"] {
+		border: none;
+		
+		margin-left: 25px;
+		margin-right: 25px;
+
+	}
+
+
+</style>
+
+</head>
+<body> 
+<h1>Simple Calculator</h1>
+
+<form action="" method="get" name="Calculator">
+<!--Your calculator buttons go here. Note there is no submit buttons at all -->
+	<table>
+		<tr><td> <input type="text" name="Display"/></td></tr>
+		<tr><td>
+			<input type="button" value="7" accesskey="7" onclick="displayDigit(7)" />
+         	<input type="button" value="8" accesskey="8" onclick="displayDigit(8)" />
+         	<input type="button" value="9" accesskey="9" onclick="displayDigit(9)" />
+         	<input type="button" value="/" accesskey="/" onclick="storeOp(4)" />
+		</td></tr>
+		<tr><td>
+			<input type="button" value="4" accesskey="4" onclick="displayDigit(4)" />
+         	<input type="button" value="5" accesskey="5" onclick="displayDigit(5)" />
+         	<input type="button" value="6" accesskey="6" onclick="displayDigit(6)" />
+         	<input type="button" value="*" accesskey="*" onclick="storeOp(3)" />
+		</td></tr>
+		<tr><td>
+			<input type="button" value="1" accesskey="1" onclick="displayDigit(1)" />
+         	<input type="button" value="2" accesskey="2" onclick="displayDigit(2)" />
+         	<input type="button" value="3" accesskey="3" onclick="displayDigit(3)" />
+         	<input type="button" value="-" accesskey="-" onclick="storeOp(2)" />
+		</td></tr>
+		<tr><td>
+			<input type="button" value="." accesskey="." onclick="decimal()" />
+         	<input type="button" value="0" accesskey="0" onclick="displayDigit(0)" />
+         	<input type="button" value="=" accesskey="=" onclick="calc()" />
+         	<input type="button" value="+" accesskey="+" onclick="storeOp(1)" />
+		</td></tr>
+		<tr><td>
+			<input type="button" value="sin" onclick="sine()" />
+         	<input type="button" value="cos" onclick="cosine()" />
+         	<input type="button" value="tan" onclick="tans()" />
+         	<input type="button" value="pi" onclick="pi()" />
+		</td></tr>
+
+
+	</table>
+</form>
+
+
+<!-- W3C XHTML Validation logo-->
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img
+     src="http://www.w3.org/Icons/valid-xhtml11"
+     alt="Valid XHTML 1.1" height="31" width="88" /></a>
+</p>
+</body>
+</html>
