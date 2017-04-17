@@ -1,0 +1,95 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	background-color:#FFF;
+	font-family: 'Lato', sans-serif;
+	font-size:12px;
+}
+
+h1
+{
+	font-size: 28px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+}
+
+#event_table
+{
+	border-collapse:collapse;
+	border-top:5px;
+	margin: 25px;
+}
+
+#event_table .table_header
+{
+	color:#000;
+	font-size:18px;
+	font-weight:400;
+	padding-left:5px;
+	text-align: center;
+	text-decoration:none;
+	width:220px;
+	padding-bottom: 5px;
+}
+
+#event_table .even_row
+{
+	background-color:#ff5c5c;
+	height:40px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+#event_table .odd_row
+{
+	background-color:#ffdfe1;
+	height:40px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+#event_table .hr_td
+{
+	text-align:right;
+	width:60px;
+}
+
+.container
+{
+	background-color:#FFF;
+	border:1px solid #000;
+	font-family: 'Lato', sans-serif;
+	font-size:12px;
+	margin:20px auto;
+	padding:0;
+	width:760px;
+}
+
+#next
+{
+	float:right;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+
+#prev
+{
+	float:left;
+	margin-bottom:10px;
+	margin-left:10px;
+}
+
+#today
+{
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100px;
+}
