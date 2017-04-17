@@ -1,0 +1,57 @@
+#car {
+	position:absolute;
+	margin-top: 200px;
+
+}
+
+#no {
+
+	float: right;
+	margin-top: 100px;
+	display:none;
+	margin-right: 50px;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-variant: normal;
+	font-weight: normal;
+	display:none;
+	position:absolute;
+}
+
+#first {
+	color: #FF5964;
+	top:100px;
+	margin-left: 50px;
+	
+}
+
+#second {
+	color:#35A7FF;
+	top:150px;
+	margin-left: 50px;
+	
+}
+#enter {
+	color:#083D77;
+	top:200px;
+	margin-left: 500px;
+
+	font-size: 64pt;
+	text-align: center
+}
+#enter a {
+	text-decoration: none;
+	font-variant: normal;
+	color:#083D77;
+	padding: 30px;
+}
+
+#enter a:hover {
+	height: 50px;
+	width: 100px;
+	background-color:  #083D77;
+	color: #fff;
+
+}

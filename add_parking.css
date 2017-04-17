@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+h1 {
+	font-size: 24pt;
+	color: #35A7FF;
+	font-style: none;
+	font-weight: normal;
+}
+label, table, input, textarea, select, option {
+	font-size: 12pt;
+	color:#083D77;
+}
+
+div {
+	left: 50%;
+}
+
+label, input, textarea, select, option {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+input {
+	padding-top:5px;
+	padding-bottom: 5px;
+}

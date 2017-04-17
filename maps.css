@@ -1,0 +1,72 @@
+
+table {
+	height:100%;
+	width: 100%;
+}
+#vote_table {
+	height: 100px;
+	width:100px;
+	vertical-align: center;
+
+}
+
+input {
+	height: 20px;
+	width: 20px;
+}
+
+#map {
+	height: 100%;
+	width: 50%;
+}
+
+#info {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+#close {
+	float:right;
+	top: 0;
+	margin-top: 0;
+
+}
+h1 {
+	font-size: 24pt;
+	color: #35A7FF;
+	font-style: none;
+	font-weight: normal;
+}
+h3 {
+	font-size: 14pt;
+	color: #FFE74C;
+	font-style: none;
+	font-weight: normal;
+}
+p {
+	font-size: 12pt;
+	color:#083D77;
+}
+
+#main_text {
+	font-size: 36pt;
+	color: #A8A8B7;
+	font-style: none;
+	font-weight: normal;
+	background-color: white;
+}
+
+a {
+	font-variant: normal;
+	text-decoration: none;
+	color: #FF5964;
+}
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}

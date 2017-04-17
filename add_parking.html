@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Add Parking Lot</title> 
+	<link rel="stylesheet" type="text/css" href="add_parking.css" />
+    <script type="text/javascript" src="add_parking.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+
+
+</head>
+<body>
+ <form id="form1" action="add_place.php" method="get">
+ <h1>Add a Parking Lot</h1>
+	<label for="name">Name: </label><input type='text' name='name' id='name'/>
+	<br />
+	<label for="address">Address: </label><input type='text' name='address' id='address'/>
+	<br />
+	<label for="lat">Latitude: </label><input type='text' name='lat' id='lat'/> 
+	<br />
+	<label for="lng">Longitude: </label><input type='text' name='lng' id='lng'/> 
+	<br />
+	<textarea name='description' id='description' cols="30" rows="5">Enter a Description</textarea>
+	<br />
+	<label for="parking_type"> Cost: </label><select id='parking_type' name='parking_type'><option value='paid' SELECTED>Paid</option>	<option value='free'>Free</option></select>
+	<label for="type">Type: </label><select id='type' name='type'><option value='street' SELECTED>Street Parking</option><option value='open_garage'>Open lot</option><option value='covered_garage'>Covered lot</option></select> 
+ 	<br />
+    <input type='submit' value='Add to map' />
+    <input type='button' value='Save entry' onclick="saveEntry()" />
+    <input type='button' value='Load entry' onclick="loadEntry()" />
+
+</form>
+</body>
+</html>
